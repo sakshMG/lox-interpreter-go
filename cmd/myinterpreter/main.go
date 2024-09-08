@@ -8,6 +8,8 @@ import (
 const (
     LEFT_PAREN rune = '(' 
     RIGHT_PAREN rune = ')'
+    LEFT_BRACE rune = '{'
+    RIGHT_BRACE rune = '}'
 )
 
 func main() {
@@ -42,10 +44,19 @@ func main() {
         switch current {
         case LEFT_PAREN:
             fmt.Println("LEFT_PAREN ( null")
-        
+
         case RIGHT_PAREN:
             fmt.Println("RIGHT_PAREN ) null")
+
+        case LEFT_BRACE:
+            fmt.Println("LEFT BRACE { null")
+
+        case RIGHT_BRACE:
+            fmt.Println("LEFT BRACE } null")
+
         }
+
+
 
     }
 
