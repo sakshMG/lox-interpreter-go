@@ -52,7 +52,7 @@ func main() {
             fmt.Println("LEFT BRACE { null")
 
         case RIGHT_BRACE:
-            fmt.Println("LEFT BRACE } null")
+            fmt.Println("RIGHT BRACE } null")
 
         }
 
