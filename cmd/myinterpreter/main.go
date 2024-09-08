@@ -1,4 +1,4 @@
-package maiostreamin
+package main    
 
 import (
 	"fmt"
