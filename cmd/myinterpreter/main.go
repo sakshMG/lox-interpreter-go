@@ -49,5 +49,5 @@ func main() {
 
     }
 
-    fmt.Println("EOF null")
+    fmt.Println("EOF  null")
 }
