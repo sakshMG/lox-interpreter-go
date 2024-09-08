@@ -1,8 +1,13 @@
-package main
+package maiostreamin
 
 import (
 	"fmt"
 	"os"
+)
+
+const (
+    LEFT_PAREN rune = '(' 
+    RIGHT_PAREN rune = ')'
 )
 
 func main() {
@@ -24,15 +29,25 @@ func main() {
 	// Uncomment this block to pass the first stage
 
 	filename := os.Args[2]
-	fileContents, err := os.ReadFile(filename)
+    rawFileContents, err := os.ReadFile(filename)
+
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error reading file: %v\n", err)
 		os.Exit(1)
 	}
 
-	if len(fileContents) > 0 {
-		panic("Scanner not implemented")
-	} else {
-		fmt.Println("EOF  null") // Placeholder, remove this line when implementing the scanner
-	}
+    fileContents := string(rawFileContents)
+
+    for _, current := range fileContents {
+        switch current {
+        case LEFT_PAREN:
+            fmt.Println("LEFT_PAREN ( null")
+        
+        case RIGHT_PAREN:
+            fmt.Println("RIGHT_PAREN ) null")
+        }
+
+    }
+
+    fmt.Print("EOF null")
 }
